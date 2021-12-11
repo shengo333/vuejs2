@@ -1,39 +1,29 @@
 new Vue ({
     el: '#vue-app',
     data: {
-        // age: 25,
-        // x: 0,
-        // y: 0
-        name: '',
-        age: '',
+        age: 20,
+        a: 0,
+        b: 0
+
     },
     methods: {
-
-        logName(){
-            console.log('you clicked alt+enter')
+        // addToA(){
+        //     console.log('add to a')
+        //     return this.a + this.age;
+        // },
+        // addToB(){
+        //     console.log('add to b')
+        //     return this.b + this.age;
+        // }
+    },
+    computed: {
+        addToA(){
+            console.log('add to a')
+            return this.a + this.age;
         },
-        logAge(){
-            console.log('you clicked alt+enter')
-        }
-        // subtract(dec){
-        //     this.age-= dec;
-        // },
-        // add(inc){
-        //     this.age+= inc;
-        // },
-        // addTen(){
-        //     this.age+=10
-        // },
-        // subtractTen(){
-        //     this.age-=10
-        // }
-        // updateXY(event){
-        //     console.log(event)
-        //     this.x = event.offsetX;
-        //     this.y = event.offsetY;
-        // },
-        // click(){
-        //     alert('you clicked me')
-        // }
+        addToB(){
+            console.log('add to b')
+            return this.b + this.age;
+        }  
     }
 });
