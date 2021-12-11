@@ -8,14 +8,20 @@
 </head>
     <body>
         <div id="vue-app">
-            <h1>Event</h1>
-            <button @click.once="add(1)">add a year</button>
+            <h1>Keyboard Events</h1>
+            <!-- <button @click.once="add(1)">add a year</button>
             <button @click="subtract(1)">substract a year</button>
             <button @dblclick="add(10)"> add 10 years</button>
             <button @dblclick="subtract(10)"> add 10 years</button>
             <p>My age is {{age}}</p>
             <div id="canvas" @mouseMove="updateXY">{{x}} - {{y}}</div>
-            <a @click.prevent="click" href="http://www.thenetninja.co.uk">The net ninja page</a>
+            <a @click.prevent="click" href="http://www.thenetninja.co.uk">The net ninja page</a> -->
+            <label>Name:</label>
+            <input type="text" v-model="name" >
+            <span>{{name}}</span>
+            <label>Age:</label>
+            <input type="text"  v-model="age" >
+            <span>{{age}}</span>
         </div>
 
         <script src="app.js"></script>
