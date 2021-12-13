@@ -1,35 +1,21 @@
-var one =new Vue ({
-    el: '#vue-app-one',
-    data: {
-        title: 'Vue app one'
+Vue.component('greeting', {
+    template: '<p> Hey, i am reusable {{name}} component. <button @click="changeName">change name</button> </p>',
+    data(){
+        return{
+            name: 'Yoshi'
+        }
     },
     methods: {
-      
-    },
-    computed: {
-        greet(){
-            return 'Hello from app one :)'
+        changeName(){
+            this.name = 'shengo';
         }
     }
 });
 
-var two =new Vue ({
-    el: '#vue-app-two',
-    data: {
-        title: 'Vue app two'
-    },
-    methods: {
-        changeTitle(){
-            one.title = "title has been changed from app vue two"
-        }
-    },
-    computed: {
-        greet(){
-
-            return 'Hello from app two :)'
-        }
-    }
+new Vue ({
+    el: '#vue-app-one'
 });
 
-
-two.title= "change came from outside"
+new Vue ({
+    el: '#vue-app-two'
+});
