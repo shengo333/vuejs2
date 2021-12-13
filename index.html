@@ -7,17 +7,16 @@
     <script src="https://unpkg.com/vue"></script>
 </head>
     <body>
-        <h1>Components </h1>
-        <div id="vue-app-one">
-            <h1>Vue app one</h1>
-            <greeting>{{name}}</greeting>
+        <h1>refs </h1>
+        <div id="vue-app">
+            <h2>refs inside app</h2>
+            <input type="text" ref="input">
+            <button @click="readRefs">Submit</button>
+            <h3>This is what you have entered {{inputvalue}}</h3>
+            <div ref="test">Hello</div>
+           
         </div>
 
-        <div id="vue-app-two">
-            <h1>Vue app two</h1>
-            <greeting></greeting>
-
-        </div>
         <script src="app.js"></script>
     </body>
 </html>
