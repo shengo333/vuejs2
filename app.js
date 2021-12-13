@@ -1,25 +1,35 @@
-new Vue ({
-    el: '#vue-app',
+var one =new Vue ({
+    el: '#vue-app-one',
     data: {
-        health: 100,
-        ended: false,
+        title: 'Vue app one'
     },
     methods: {
-        punch(){
-            this.health -= 10;
-            console.log('you punched me')
-            if(this.health <= 0){
-                this.ended = true
-            }
-        },
-        restart(){
-            this.health = 100;
-            this.ended = false;
-        }
+      
     },
     computed: {
-        compClasses(){
-
+        greet(){
+            return 'Hello from app one :)'
         }
     }
 });
+
+var two =new Vue ({
+    el: '#vue-app-two',
+    data: {
+        title: 'Vue app two'
+    },
+    methods: {
+        changeTitle(){
+            one.title = "title has been changed from app vue two"
+        }
+    },
+    computed: {
+        greet(){
+
+            return 'Hello from app two :)'
+        }
+    }
+});
+
+
+two.title= "change came from outside"
